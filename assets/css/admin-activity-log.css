@@ -1,0 +1,134 @@
+/**
+ * Admin Activity Log Styles
+ * Author: Tobalt — https://tobalt.lt
+ */
+
+.tobalt-activity-log {
+    max-width: 1200px;
+}
+
+/* Stats Cards */
+.tobalt-stats-cards {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+.tobalt-stat-card {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 20px 25px;
+    min-width: 180px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.tobalt-stat-value {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1.2;
+}
+
+.tobalt-stat-label {
+    display: block;
+    font-size: 13px;
+    color: #646970;
+    margin-top: 5px;
+}
+
+.tobalt-stat-success .tobalt-stat-value {
+    color: #00a32a;
+}
+
+.tobalt-stat-warning .tobalt-stat-value {
+    color: #dba617;
+}
+
+.tobalt-stat-info .tobalt-stat-value {
+    color: #0073aa;
+    font-size: 18px;
+}
+
+/* Filters */
+.tobalt-log-filters {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.tobalt-log-filters select,
+.tobalt-log-filters input[type="email"],
+.tobalt-log-filters input[type="date"] {
+    min-width: 150px;
+}
+
+/* Action Badges */
+.tobalt-action-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tobalt-action-created {
+    background: #e7f3ff;
+    color: #0073aa;
+}
+
+.tobalt-action-published {
+    background: #e6f6e6;
+    color: #00a32a;
+}
+
+.tobalt-action-updated {
+    background: #fff8e5;
+    color: #996800;
+}
+
+.tobalt-action-solved {
+    background: #d4edda;
+    color: #155724;
+}
+
+.tobalt-action-expired {
+    background: #f8d7da;
+    color: #721c24;
+}
+
+/* Alert ID */
+.tobalt-alert-id {
+    color: #999;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* Deleted alert */
+.tobalt-deleted {
+    color: #999;
+    font-style: italic;
+}
+
+/* Time to solve */
+.tobalt-time-to-solve {
+    color: #00a32a;
+    font-weight: 500;
+}
+
+/* Pagination */
+.tablenav-pages .pagination-links {
+    display: inline-flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.tablenav-pages .pagination-links .button {
+    min-width: 30px;
+    text-align: center;
+}

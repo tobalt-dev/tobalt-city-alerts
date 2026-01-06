@@ -1,6 +1,6 @@
 # tobalt-city-alerts - Features
 
-**Version:** 0.1.0
+**Version:** v1.3.9
 **Last Updated:** 2026-01-06
 
 ## New Features

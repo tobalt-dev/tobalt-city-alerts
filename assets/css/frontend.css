@@ -796,4 +796,9 @@
     font-weight: 500 !important;
     color: inherit !important;
     white-space: nowrap !important;
+    transition: color 0.2s !important;
+}
+
+.tobalt-inline-trigger:hover .tobalt-inline-label {
+    color: #000 !important;
 }

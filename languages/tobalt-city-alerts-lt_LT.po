@@ -1,0 +1,860 @@
+# Lithuanian translation for Tobalt City Alerts
+# Author: Tobalt — https://tobalt.lt
+msgid ""
+msgstr ""
+"Project-Id-Version: Tobalt City Alerts 1.0.0\n"
+"Report-Msgid-Bugs-To: https://tobalt.lt\n"
+"POT-Creation-Date: 2024-01-01 00:00+0000\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Tobalt <info@tobalt.lt>\n"
+"Language-Team: Lithuanian\n"
+"Language: lt_LT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# CPT Labels
+msgid "City Alerts"
+msgstr "Pranešimai gyventojams"
+
+msgid "Alert"
+msgstr "Pranešimas"
+
+msgid "Alerts"
+msgstr "Pranešimai"
+
+msgid "Add New"
+msgstr "Pridėti naują"
+
+msgid "Add New Alert"
+msgstr "Pridėti naują pranešimą"
+
+msgid "Edit Alert"
+msgstr "Redaguoti pranešimą"
+
+msgid "New Alert"
+msgstr "Naujas pranešimas"
+
+msgid "View Alert"
+msgstr "Peržiūrėti pranešimą"
+
+msgid "View Alerts"
+msgstr "Peržiūrėti pranešimus"
+
+msgid "Search Alerts"
+msgstr "Ieškoti pranešimų"
+
+msgid "Not found"
+msgstr "Nerasta"
+
+msgid "Not found in Trash"
+msgstr "Šiukšlinėje nerasta"
+
+msgid "All Alerts"
+msgstr "Visi pranešimai"
+
+msgid "Categories"
+msgstr "Kategorijos"
+
+msgid "Category"
+msgstr "Kategorija"
+
+msgid "Providers"
+msgstr "Teikėjai"
+
+msgid "Provider"
+msgstr "Teikėjas"
+
+# Admin Settings
+msgid "Settings"
+msgstr "Nustatymai"
+
+msgid "City Alerts Settings"
+msgstr "Pranešimų gyventojams nustatymai"
+
+msgid "Display Settings"
+msgstr "Rodymo nustatymai"
+
+msgid "Icon Position"
+msgstr "Ikonos pozicija"
+
+msgid "Left"
+msgstr "Kairė"
+
+msgid "Right"
+msgstr "Dešinė"
+
+msgid "Icon Color"
+msgstr "Ikonos spalva"
+
+msgid "Panel Width (px)"
+msgstr "Skydelio plotis (px)"
+
+msgid "Injection Mode"
+msgstr "Įterpimo režimas"
+
+msgid "Auto (all pages)"
+msgstr "Automatinis (visuose puslapiuose)"
+
+msgid "Shortcode only"
+msgstr "Tik trumpasis kodas"
+
+msgid "Use [tobalt_city_alerts] shortcode in shortcode mode."
+msgstr "Naudokite [tobalt_city_alerts] trumpąjį kodą shortcode režime."
+
+msgid "Date Range (days)"
+msgstr "Datų intervalas (dienomis)"
+
+msgid "Workflow Settings"
+msgstr "Darbo eigos nustatymai"
+
+msgid "Require Approval"
+msgstr "Reikalauti patvirtinimo"
+
+msgid "Employee-submitted alerts require admin approval before publishing."
+msgstr "Darbuotojų pateikti pranešimai reikalauja administratoriaus patvirtinimo prieš publikavimą."
+
+msgid "Magic Link Expiry (minutes)"
+msgstr "Nuorodos galiojimas (minutėmis)"
+
+msgid "Rate Limit (requests/hour)"
+msgstr "Užklausų limitas (per valandą)"
+
+msgid "Email Settings"
+msgstr "El. pašto nustatymai"
+
+msgid "From Name"
+msgstr "Siuntėjo vardas"
+
+msgid "From Address"
+msgstr "Siuntėjo adresas"
+
+msgid "Leave empty to use site admin email."
+msgstr "Palikite tuščią, kad būtų naudojamas administratoriaus el. paštas."
+
+msgid "Custom Labels"
+msgstr "Pritaikytos etiketės"
+
+msgid "Panel Title"
+msgstr "Skydelio pavadinimas"
+
+msgid "No Alerts Message"
+msgstr "Pranešimas kai nėra įspėjimų"
+
+msgid "Submit Button Text"
+msgstr "Pateikimo mygtuko tekstas"
+
+# Approved Emails
+msgid "Approved Emails"
+msgstr "Patvirtinti el. paštai"
+
+msgid "Email"
+msgstr "El. paštas"
+
+msgid "Name"
+msgstr "Vardas"
+
+msgid "Department"
+msgstr "Skyrius"
+
+msgid "Added"
+msgstr "Pridėta"
+
+msgid "Actions"
+msgstr "Veiksmai"
+
+msgid "Delete"
+msgstr "Ištrinti"
+
+msgid "Add New Approved Email"
+msgstr "Pridėti naują patvirtintą el. paštą"
+
+msgid "Add Email"
+msgstr "Pridėti el. paštą"
+
+msgid "Email added."
+msgstr "El. paštas pridėtas."
+
+msgid "Email deleted."
+msgstr "El. paštas ištrintas."
+
+msgid "No approved emails yet."
+msgstr "Dar nėra patvirtintų el. paštų."
+
+msgid "Delete this email?"
+msgstr "Ištrinti šį el. paštą?"
+
+# Subscribers
+msgid "Subscribers"
+msgstr "Prenumeratoriai"
+
+msgid "Subscriber deleted."
+msgstr "Prenumeratorius ištrintas."
+
+msgid "Export CSV"
+msgstr "Eksportuoti CSV"
+
+msgid "Total: %s"
+msgstr "Iš viso: %s"
+
+msgid "Verified: %s"
+msgstr "Patvirtinta: %s"
+
+msgid "Pending: %s"
+msgstr "Laukiama: %s"
+
+msgid "Search email..."
+msgstr "Ieškoti el. pašto..."
+
+msgid "Search"
+msgstr "Ieškoti"
+
+msgid "Status"
+msgstr "Būsena"
+
+msgid "Subscribed"
+msgstr "Prenumeruota"
+
+msgid "No subscribers found."
+msgstr "Prenumeratorių nerasta."
+
+msgid "Verified"
+msgstr "Patvirtinta"
+
+msgid "Pending"
+msgstr "Laukiama"
+
+msgid "All"
+msgstr "Visi"
+
+msgid "Yes"
+msgstr "Taip"
+
+msgid "No"
+msgstr "Ne"
+
+msgid "Delete this subscriber?"
+msgstr "Ištrinti šį prenumeratorių?"
+
+# Frontend Panel
+msgid "Toggle alerts panel"
+msgstr "Atidaryti/uždaryti pranešimų skydelį"
+
+msgid "Close"
+msgstr "Uždaryti"
+
+msgid "Loading..."
+msgstr "Kraunama..."
+
+msgid "Today"
+msgstr "Šiandien"
+
+msgid "Tomorrow"
+msgstr "Rytoj"
+
+msgid "Pinned"
+msgstr "Prisegta"
+
+msgid "No alerts for this day"
+msgstr "Šią dieną pranešimų nėra"
+
+msgid "Submit Alert"
+msgstr "Pateikti pranešimą"
+
+# Meta Boxes
+msgid "Alert Details"
+msgstr "Pranešimo informacija"
+
+msgid "Severity"
+msgstr "Svarba"
+
+msgid "Low"
+msgstr "Žema"
+
+msgid "Medium"
+msgstr "Vidutinė"
+
+msgid "High"
+msgstr "Aukšta"
+
+msgid "Critical"
+msgstr "Kritinė"
+
+msgid "Starts At"
+msgstr "Pradžia"
+
+msgid "Ends At"
+msgstr "Pabaiga"
+
+msgid "Location"
+msgstr "Vieta"
+
+msgid "Pinned Alert"
+msgstr "Prisegtas pranešimas"
+
+msgid "Pin this alert to top"
+msgstr "Prisegti šį pranešimą viršuje"
+
+msgid "Schedule Settings"
+msgstr "Planavimo nustatymai"
+
+msgid "Publish At"
+msgstr "Publikuoti"
+
+msgid "Leave empty to publish immediately or use WordPress native scheduling."
+msgstr "Palikite tuščią, kad publikuotumėte iš karto, arba naudokite WordPress planavimą."
+
+msgid "Expire At"
+msgstr "Galioja iki"
+
+msgid "Alert will be automatically unpublished at this time."
+msgstr "Pranešimas bus automatiškai atšauktas šiuo laiku."
+
+msgid "Submitted By"
+msgstr "Pateikė"
+
+msgid "via magic link"
+msgstr "per nuorodą"
+
+# Request Link Form
+msgid "Request Submission Link"
+msgstr "Prašyti pateikimo nuorodos"
+
+msgid "Email Address"
+msgstr "El. pašto adresas"
+
+msgid "your@email.com"
+msgstr "jusu@pastas.lt"
+
+msgid "Request Link"
+msgstr "Prašyti nuorodos"
+
+msgid "Requesting..."
+msgstr "Siunčiama..."
+
+msgid "An error occurred."
+msgstr "Įvyko klaida."
+
+msgid "Network error. Please try again."
+msgstr "Tinklo klaida. Bandykite dar kartą."
+
+msgid "Magic link sent! Check your email."
+msgstr "Nuoroda išsiųsta! Patikrinkite savo el. paštą."
+
+msgid "Check your email! A magic link has been sent."
+msgstr "Patikrinkite savo el. paštą! Nuoroda išsiųsta."
+
+msgid "Request another link"
+msgstr "Prašyti naujos nuorodos"
+
+msgid "Your Email Address"
+msgstr "Jūsų el. pašto adresas"
+
+msgid "Enter your approved email"
+msgstr "Įveskite patvirtintą el. paštą"
+
+msgid "Send Magic Link"
+msgstr "Siųsti prisijungimo nuorodą"
+
+msgid "Sending..."
+msgstr "Siunčiama..."
+
+# Subscribe Form
+msgid "Subscribe to Alerts"
+msgstr "Prenumeruoti pranešimus"
+
+msgid "Categories (optional)"
+msgstr "Kategorijos (neprivaloma)"
+
+msgid "Leave empty to receive all categories"
+msgstr "Palikite tuščią, kad gautumėte visų kategorijų"
+
+msgid "Providers (optional)"
+msgstr "Teikėjai (neprivaloma)"
+
+msgid "Leave empty to receive from all providers"
+msgstr "Palikite tuščią, kad gautumėte iš visų teikėjų"
+
+msgid "Subscribe"
+msgstr "Prenumeruoti"
+
+msgid "Subscribing..."
+msgstr "Prenumeruojama..."
+
+msgid "Please check your email to verify your subscription."
+msgstr "Patikrinkite savo el. paštą, kad patvirtintumėte prenumeratą."
+
+# Subscription Verification
+msgid "Verify Your Subscription"
+msgstr "Patvirtinkite prenumeratą"
+
+msgid "Click the button below to confirm your subscription to city alerts."
+msgstr "Paspauskite mygtuką žemiau, kad patvirtintumėte miesto pranešimų prenumeratą."
+
+msgid "Verify Subscription"
+msgstr "Patvirtinti prenumeratą"
+
+msgid "This link is valid for 48 hours."
+msgstr "Ši nuoroda galioja 48 valandas."
+
+msgid "If you didn't request this subscription, you can safely ignore this email."
+msgstr "Jei neprašėte šios prenumeratos, galite ignoruoti šį laišką."
+
+msgid "Subscription Verified"
+msgstr "Prenumerata patvirtinta"
+
+msgid "Subscription Verified!"
+msgstr "Prenumerata patvirtinta!"
+
+msgid "Your email subscription has been confirmed. You will now receive alerts based on your preferences."
+msgstr "Jūsų el. pašto prenumerata patvirtinta. Dabar gausite pranešimus pagal savo nuostatas."
+
+msgid "← Return to site"
+msgstr "← Grįžti į svetainę"
+
+# Unsubscribe
+msgid "Unsubscribed"
+msgstr "Prenumerata atšaukta"
+
+msgid "You have been successfully unsubscribed from city alerts. You will no longer receive email notifications."
+msgstr "Sėkmingai atšaukėte miesto pranešimų prenumeratą. Nebegausite el. pašto pranešimų."
+
+# Notification Email
+msgid "New Alert: %2$s"
+msgstr "Naujas pranešimas: %2$s"
+
+msgid "Starts:"
+msgstr "Pradžia:"
+
+msgid "Ends:"
+msgstr "Pabaiga:"
+
+msgid "Category:"
+msgstr "Kategorija:"
+
+msgid "Provider:"
+msgstr "Teikėjas:"
+
+msgid "View All Alerts"
+msgstr "Peržiūrėti visus pranešimus"
+
+msgid "You received this email because you subscribed to alerts."
+msgstr "Gavote šį laišką, nes prenumeravote pranešimus."
+
+msgid "Unsubscribe"
+msgstr "Atsisakyti prenumeratos"
+
+# Magic Link Email
+msgid "Your Alert Submission Link"
+msgstr "Jūsų pranešimo pateikimo nuoroda"
+
+msgid "Click the button below to submit a new alert. This link is valid for one use only."
+msgstr "Paspauskite mygtuką žemiau, kad pateiktumėte naują pranešimą. Ši nuoroda galioja tik vieną kartą."
+
+msgid "This link expires in %d minutes."
+msgstr "Ši nuoroda galioja %d minučių."
+
+msgid "If you didn't request this link, you can safely ignore this email."
+msgstr "Jei neprašėte šios nuorodos, galite ignoruoti šį laišką."
+
+# Submission Form
+msgid "Title"
+msgstr "Pavadinimas"
+
+msgid "Alert title..."
+msgstr "Pranešimo pavadinimas..."
+
+msgid "Description"
+msgstr "Aprašymas"
+
+msgid "Describe the alert..."
+msgstr "Aprašykite pranešimą..."
+
+msgid "Optional"
+msgstr "Neprivaloma"
+
+msgid "Submitting..."
+msgstr "Pateikiama..."
+
+msgid "Alert submitted successfully!"
+msgstr "Pranešimas sėkmingai pateiktas!"
+
+msgid "Alert submitted! It will be published after admin review."
+msgstr "Pranešimas pateiktas! Jis bus publikuotas po administratoriaus patvirtinimo."
+
+msgid "Alert published successfully!"
+msgstr "Pranešimas sėkmingai publikuotas!"
+
+msgid "Your alert has been submitted and is pending review."
+msgstr "Jūsų pranešimas pateiktas ir laukia peržiūros."
+
+msgid "Your alert has been submitted and published."
+msgstr "Jūsų pranešimas pateiktas ir publikuotas."
+
+# Errors
+msgid "Invalid submission link."
+msgstr "Netinkama pateikimo nuoroda."
+
+msgid "Invalid verification link."
+msgstr "Netinkama patvirtinimo nuoroda."
+
+msgid "Invalid unsubscribe link."
+msgstr "Netinkama atsisakymo nuoroda."
+
+msgid "Invalid email address."
+msgstr "Neteisingas el. pašto adresas."
+
+msgid "Email not approved for submissions."
+msgstr "El. paštas nepatvirtintas pranešimų pateikimui."
+
+msgid "Rate limit exceeded. Please try again later."
+msgstr "Viršytas užklausų limitas. Bandykite vėliau."
+
+msgid "Token expired or already used."
+msgstr "Nuoroda nebegalioja arba jau panaudota."
+
+msgid "Failed to add subscription."
+msgstr "Nepavyko pridėti prenumeratos."
+
+msgid "Subscription not found."
+msgstr "Prenumerata nerasta."
+
+msgid "Subscription already verified."
+msgstr "Prenumerata jau patvirtinta."
+
+msgid "Unauthorized"
+msgstr "Neautorizuota"
+
+# CSV Export
+msgid "Export Alerts"
+msgstr "Eksportuoti pranešimus"
+
+msgid "Download CSV"
+msgstr "Atsisiųsti CSV"
+
+msgid "Export all alerts to CSV file."
+msgstr "Eksportuoti visus pranešimus į CSV failą."
+
+# Tooltips (for settings)
+msgid "tooltip_icon_position"
+msgstr "Pasirinkite, kurioje ekrano pusėje bus rodoma pranešimų ikona."
+
+msgid "tooltip_icon_color"
+msgstr "Pasirinkite ikonos ir skydelio antraštės spalvą."
+
+msgid "tooltip_panel_width"
+msgstr "Skydelio plotis pikseliais. Rekomenduojama: 350-450px."
+
+msgid "tooltip_injection_mode"
+msgstr "Automatinis - ikona rodoma visuose puslapiuose. Trumpasis kodas - tik ten, kur įdėsite [tobalt_city_alerts]."
+
+msgid "tooltip_date_range"
+msgstr "Kiek dienų į priekį rodyti pranešimus skydelyje."
+
+msgid "tooltip_require_approval"
+msgstr "Kai įjungta, darbuotojų pateikti pranešimai bus matomi tik po administratoriaus patvirtinimo."
+
+msgid "tooltip_token_expiry"
+msgstr "Kiek minučių galioja pateikimo nuoroda, išsiųsta darbuotojui."
+
+msgid "tooltip_rate_limit"
+msgstr "Kiek kartų per valandą tas pats el. paštas gali prašyti naujos nuorodos."
+
+msgid "tooltip_email_from_name"
+msgstr "Vardas, kuris bus rodomas kaip laiškų siuntėjas."
+
+msgid "tooltip_email_from_address"
+msgstr "El. pašto adresas, iš kurio bus siunčiami laiškai."
+
+msgid "tooltip_panel_title"
+msgstr "Pavadinimas, rodomas pranešimų skydelio viršuje."
+
+msgid "tooltip_no_alerts"
+msgstr "Tekstas, rodomas kai pasirinktą dieną nėra pranešimų."
+
+msgid "tooltip_submit_button"
+msgstr "Mygtuko tekstas pranešimo pateikimo formoje."
+
+# reCAPTCHA
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+msgid "Enable reCAPTCHA"
+msgstr "Įjungti reCAPTCHA"
+
+msgid "Protect forms with Google reCAPTCHA v3."
+msgstr "Apsaugoti formas su Google reCAPTCHA v3."
+
+msgid "Site Key"
+msgstr "Svetainės raktas"
+
+msgid "Secret Key"
+msgstr "Slaptasis raktas"
+
+msgid "reCAPTCHA verification failed. Please try again."
+msgstr "reCAPTCHA patikrinimas nepavyko. Bandykite dar kartą."
+
+msgid "tooltip_recaptcha_enabled"
+msgstr "Įjunkite, kad formos būtų apsaugotos nuo robotų su Google reCAPTCHA v3."
+
+msgid "tooltip_recaptcha_site_key"
+msgstr "Svetainės raktas iš Google reCAPTCHA valdymo skydelio."
+
+msgid "tooltip_recaptcha_secret_key"
+msgstr "Slaptasis raktas iš Google reCAPTCHA valdymo skydelio. Niekam nerodykite."
+
+# Demo Content
+msgid "Demo Content"
+msgstr "Demonstracinis turinys"
+
+msgid "Create Demo Content"
+msgstr "Sukurti demonstracinį turinį"
+
+msgid "Delete Demo Content"
+msgstr "Ištrinti demonstracinį turinį"
+
+msgid "Create demo alerts to test the plugin functionality. Demo content can be deleted at any time."
+msgstr "Sukurkite demonstracinius pranešimus, kad išbandytumėte įskiepio funkcionalumą. Demonstracinį turinį galite ištrinti bet kada."
+
+msgid "Current demo alerts: %d"
+msgstr "Dabartiniai demonstraciniai pranešimai: %d"
+
+msgid "Demo content created successfully!"
+msgstr "Demonstracinis turinys sėkmingai sukurtas!"
+
+msgid "Demo content deleted successfully!"
+msgstr "Demonstracinis turinys sėkmingai ištrintas!"
+
+msgid "tooltip_demo_content"
+msgstr "Sukurkite testinių pranešimų, kad pamatytumėte kaip veikia įskiepis. Demonstracinį turinį lengvai ištrinsite vienu mygtuko paspaudimu."
+
+# Demo alert titles
+msgid "Water supply interruption"
+msgstr "Vandens tiekimo nutraukimas"
+
+msgid "Planned electricity outage"
+msgstr "Planuojamas elektros tiekimo nutraukimas"
+
+msgid "Road closure for repairs"
+msgstr "Kelio uždarymas remontui"
+
+msgid "Waste collection schedule change"
+msgstr "Šiukšlių išvežimo grafiko pakeitimas"
+
+msgid "Emergency water supply disruption"
+msgstr "Avarinis vandens tiekimo sutrikimas"
+
+# Demo alert content
+msgid "Due to repair works, water supply will be temporarily interrupted in the central district. Please prepare water reserves in advance."
+msgstr "Dėl remonto darbų centriniame rajone bus laikinai nutrauktas vandens tiekimas. Prašome iš anksto pasiruošti vandens atsargas."
+
+msgid "Planned maintenance works on the electrical grid. Electricity will be disconnected from 9:00 to 17:00."
+msgstr "Planuojami elektros tinklo priežiūros darbai. Elektra bus atjungta nuo 9:00 iki 17:00."
+
+msgid "Main Street will be closed for road surface repairs. Please use alternative routes."
+msgstr "Pagrindinė gatvė bus uždaryta kelio dangos remontui. Prašome naudoti alternatyvius maršrutus."
+
+msgid "Due to holidays, waste collection will be postponed by one day this week."
+msgstr "Dėl švenčių šiukšlių išvežimas šią savaitę bus atidėtas viena diena."
+
+msgid "Emergency pipe burst has caused water supply disruption. Repair crews are working on site."
+msgstr "Avarinis vamzdžio lūžis sukėlė vandens tiekimo sutrikimą. Remonto brigados dirba vietoje."
+
+# Demo categories
+msgid "Water Supply"
+msgstr "Vandentiekis"
+
+msgid "Electricity"
+msgstr "Elektra"
+
+msgid "Roads"
+msgstr "Keliai"
+
+msgid "Waste Management"
+msgstr "Atliekų tvarkymas"
+
+# Demo provider
+msgid "City Municipality"
+msgstr "Miesto savivaldybė"
+
+# Tooltip for icon
+msgid "New message for residents"
+msgstr "Naujas pranešimas gyventojams"
+
+# Submission Form Date/Time Labels
+msgid "Start Date"
+msgstr "Pradžios data"
+
+msgid "Start Time"
+msgstr "Pradžios laikas"
+
+msgid "End Date (planned completion)"
+msgstr "Planuojama pabaiga"
+
+msgid "End Time"
+msgstr "Pabaigos laikas"
+
+msgid "Fill out the form below to submit a new alert."
+msgstr "Užpildykite formą žemiau, kad pateiktumėte naują pranešimą."
+
+msgid "Submitting as: %s"
+msgstr "Pateikiama kaip: %s"
+
+msgid "Thank you! Your alert has been submitted."
+msgstr "Ačiū! Jūsų pranešimas pateiktas."
+
+msgid "Return to site"
+msgstr "Grįžti į svetainę"
+
+msgid "— Select —"
+msgstr "— Pasirinkite —"
+
+msgid "— None —"
+msgstr "— Nėra —"
+
+msgid "e.g., Main Street 15"
+msgstr "pvz., Pagrindinė g. 15"
+
+# Activity Log
+msgid "Activity Log"
+msgstr "Veiksmų žurnalas"
+
+msgid "Alert Management"
+msgstr "Pranešimų valdymas"
+
+msgid "My Alerts"
+msgstr "Mano pranešimai"
+
+msgid "Change Date"
+msgstr "Keisti datą"
+
+msgid "Mark as Solved"
+msgstr "Pažymėti kaip išspręstą"
+
+msgid "Solved"
+msgstr "Išspręsta"
+
+msgid "Active"
+msgstr "Aktyvus"
+
+msgid "Pending approval"
+msgstr "Laukia patvirtinimo"
+
+msgid "Draft"
+msgstr "Juodraštis"
+
+msgid "Submit another"
+msgstr "Pateikti dar vieną"
+
+msgid "You have not submitted any alerts yet."
+msgstr "Jūs dar nepateikėte jokių pranešimų."
+
+msgid "Are you sure you want to mark this alert as solved?"
+msgstr "Ar tikrai norite pažymėti šį pranešimą kaip išspręstą?"
+
+msgid "Change end date"
+msgstr "Keisti pabaigos datą"
+
+msgid "Cancel"
+msgstr "Atšaukti"
+
+msgid "Save"
+msgstr "Išsaugoti"
+
+msgid "Alert updated successfully."
+msgstr "Pranešimas sėkmingai atnaujintas."
+
+msgid "Alert marked as solved."
+msgstr "Pranešimas pažymėtas kaip išspręstas."
+
+msgid "You can only edit your own alerts."
+msgstr "Galite redaguoti tik savo pranešimus."
+
+msgid "You can only mark your own alerts as solved."
+msgstr "Galite pažymėti kaip išspręstus tik savo pranešimus."
+
+msgid "Invalid token."
+msgstr "Netinkamas raktas."
+
+# Activity Log Admin
+msgid "Created alerts"
+msgstr "Sukurta pranešimų"
+
+msgid "Auto-expired"
+msgstr "Pasibaigė automatiškai"
+
+msgid "Avg. solve time"
+msgstr "Vid. sprendimo laikas"
+
+msgid "All actions"
+msgstr "Visi veiksmai"
+
+msgid "Filter"
+msgstr "Filtruoti"
+
+msgid "Clear"
+msgstr "Išvalyti"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Action"
+msgstr "Veiksmas"
+
+msgid "Actor"
+msgstr "Atlikėjas"
+
+msgid "Details"
+msgstr "Detalės"
+
+msgid "System"
+msgstr "Sistema"
+
+msgid "Deleted"
+msgstr "Ištrintas"
+
+msgid "No records found."
+msgstr "Įrašų nerasta."
+
+msgid "%s records"
+msgstr "%s įrašų"
+
+msgid "Most active submitters"
+msgstr "Aktyviausi pateikėjai"
+
+msgid "Count"
+msgstr "Kiekis"
+
+msgid "Created"
+msgstr "Sukurta"
+
+msgid "Published"
+msgstr "Publikuota"
+
+msgid "Updated"
+msgstr "Atnaujinta"
+
+msgid "Expired"
+msgstr "Pasibaigė"
+
+msgid "Less than a minute"
+msgstr "Mažiau nei minutė"
+
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] "%d diena"
+msgstr[1] "%d dienos"
+msgstr[2] "%d dienų"
+
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] "%d valanda"
+msgstr[1] "%d valandos"
+msgstr[2] "%d valandų"
+
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] "%d minutė"
+msgstr[1] "%d minutės"
+msgstr[2] "%d minučių"

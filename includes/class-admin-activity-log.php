@@ -52,12 +52,25 @@ class Admin_Activity_Log {
     public function render_page() {
         $activity_log = new Activity_Log();
 
-        // Get filters
-        $action    = isset( $_GET['filter_action'] ) ? sanitize_text_field( $_GET['filter_action'] ) : '';
-        $email     = isset( $_GET['filter_email'] ) ? sanitize_email( $_GET['filter_email'] ) : '';
-        $date_from = isset( $_GET['date_from'] ) ? sanitize_text_field( $_GET['date_from'] ) : '';
-        $date_to   = isset( $_GET['date_to'] ) ? sanitize_text_field( $_GET['date_to'] ) : '';
-        $page      = isset( $_GET['paged'] ) ? max( 1, (int) $_GET['paged'] ) : 1;
+        // Get filters (verify nonce if filter submitted)
+        $action    = '';
+        $email     = '';
+        $date_from = '';
+        $date_to   = '';
+
+        if ( isset( $_GET['filter_action'] ) || isset( $_GET['filter_email'] ) || isset( $_GET['date_from'] ) || isset( $_GET['date_to'] ) ) {
+            if ( ! isset( $_GET['_wpnonce'] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_GET['_wpnonce'] ) ), 'tobalt_activity_log_filter' ) ) {
+                // Invalid nonce - ignore filters
+                add_settings_error( 'tobalt_activity_log', 'invalid_nonce', __( 'Security check failed. Please try again.', 'tobalt-city-alerts' ), 'error' );
+            } else {
+                $action    = isset( $_GET['filter_action'] ) ? sanitize_text_field( $_GET['filter_action'] ) : '';
+                $email     = isset( $_GET['filter_email'] ) ? sanitize_email( $_GET['filter_email'] ) : '';
+                $date_from = isset( $_GET['date_from'] ) ? sanitize_text_field( $_GET['date_from'] ) : '';
+                $date_to   = isset( $_GET['date_to'] ) ? sanitize_text_field( $_GET['date_to'] ) : '';
+            }
+        }
+
+        $page = isset( $_GET['paged'] ) ? max( 1, (int) $_GET['paged'] ) : 1;
 
         // Get logs
         $result = $activity_log->get_logs( [
@@ -109,6 +122,7 @@ class Admin_Activity_Log {
             <form method="get" class="tobalt-log-filters">
                 <input type="hidden" name="post_type" value="tobalt_alert">
                 <input type="hidden" name="page" value="tobalt-activity-log">
+                <?php wp_nonce_field( 'tobalt_activity_log_filter', '_wpnonce', false ); ?>
 
                 <select name="filter_action">
                     <option value=""><?php esc_html_e( 'Visi veiksmai', 'tobalt-city-alerts' ); ?></option>

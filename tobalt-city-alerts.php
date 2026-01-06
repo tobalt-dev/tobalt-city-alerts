@@ -3,7 +3,7 @@
  * Plugin Name: Tobalt City Alerts
  * Plugin URI: https://tobalt.lt
  * Description: Pranešimų sistema savivaldybėms ir organizacijoms. Darbuotojai pateikia pranešimus per magic link, gyventojai mato juos išskleidžiamame skydelyje.
- * Version: 1.3.8
+ * Version: 1.3.9
  * Author: Tobalt — https://tobalt.lt
  * Author URI: https://tobalt.lt
  * License: GPL v2 or later
@@ -17,7 +17,7 @@ namespace Tobalt\CityAlerts;
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'TOBALT_CITY_ALERTS_VERSION', '1.3.8' );
+define( 'TOBALT_CITY_ALERTS_VERSION', '1.3.9' );
 define( 'TOBALT_CITY_ALERTS_FILE', __FILE__ );
 define( 'TOBALT_CITY_ALERTS_PATH', plugin_dir_path( __FILE__ ) );
 define( 'TOBALT_CITY_ALERTS_URL', plugin_dir_url( __FILE__ ) );

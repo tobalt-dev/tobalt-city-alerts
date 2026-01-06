@@ -43,13 +43,15 @@ class Subscribers {
             providers TEXT DEFAULT NULL,
             verified TINYINT(1) DEFAULT 0,
             verify_token VARCHAR(64) DEFAULT NULL,
+            verify_token_expires DATETIME DEFAULT NULL,
             unsubscribe_token VARCHAR(64) NOT NULL,
             created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
             verified_at DATETIME DEFAULT NULL,
             PRIMARY KEY (id),
             UNIQUE KEY email (email),
             KEY verify_token (verify_token),
-            KEY unsubscribe_token (unsubscribe_token)
+            KEY unsubscribe_token (unsubscribe_token),
+            KEY verified (verified)
         ) {$charset_collate};";
 
         require_once ABSPATH . 'wp-admin/includes/upgrade.php';
@@ -76,19 +78,21 @@ class Subscribers {
             return $this->update( $existing->id, $categories );
         }
 
-        $verify_token      = bin2hex( random_bytes( 32 ) );
-        $unsubscribe_token = bin2hex( random_bytes( 32 ) );
+        $verify_token         = bin2hex( random_bytes( 32 ) );
+        $unsubscribe_token    = bin2hex( random_bytes( 32 ) );
+        $token_expires        = gmdate( 'Y-m-d H:i:s', time() + DAY_IN_SECONDS ); // 24 hours
 
         $result = $wpdb->insert(
             $this->table_name,
             [
-                'email'             => $email,
-                'categories'        => wp_json_encode( array_map( 'absint', $categories ) ),
-                'verified'          => 0,
-                'verify_token'      => $verify_token,
-                'unsubscribe_token' => $unsubscribe_token,
+                'email'                => $email,
+                'categories'           => wp_json_encode( array_map( 'absint', $categories ) ),
+                'verified'             => 0,
+                'verify_token'         => $verify_token,
+                'verify_token_expires' => $token_expires,
+                'unsubscribe_token'    => $unsubscribe_token,
             ],
-            [ '%s', '%s', '%d', '%s', '%s' ]
+            [ '%s', '%s', '%d', '%s', '%s', '%s' ]
         );
 
         if ( ! $result ) {
@@ -114,15 +118,17 @@ class Subscribers {
         }
 
         // Generate new verify token if not verified
-        $verify_token = $subscriber->verified ? null : bin2hex( random_bytes( 32 ) );
+        $verify_token  = $subscriber->verified ? null : bin2hex( random_bytes( 32 ) );
+        $token_expires = $subscriber->verified ? null : gmdate( 'Y-m-d H:i:s', time() + DAY_IN_SECONDS );
 
         $data = [
             'categories' => wp_json_encode( array_map( 'absint', $categories ) ),
         ];
 
         if ( $verify_token ) {
-            $data['verify_token'] = $verify_token;
-            $data['verified']     = 0;
+            $data['verify_token']         = $verify_token;
+            $data['verify_token_expires'] = $token_expires;
+            $data['verified']             = 0;
         }
 
         $wpdb->update(
@@ -146,6 +152,18 @@ class Subscribers {
 
         $token = sanitize_text_field( $token );
 
+        // Rate limiting: max 10 attempts per IP per hour
+        $ip             = $this->get_client_ip();
+        $transient_key  = 'tobalt_verify_attempts_' . md5( $ip );
+        $attempts       = (int) get_transient( $transient_key );
+
+        if ( $attempts >= 10 ) {
+            return new \WP_Error( 'rate_limited', __( 'Too many verification attempts. Please try again later.', 'tobalt-city-alerts' ) );
+        }
+
+        // Increment attempts
+        set_transient( $transient_key, $attempts + 1, HOUR_IN_SECONDS );
+
         $subscriber = $wpdb->get_row( $wpdb->prepare(
             "SELECT * FROM {$this->table_name} WHERE verify_token = %s",
             $token
@@ -159,17 +177,44 @@ class Subscribers {
             return new \WP_Error( 'already_verified', __( 'Subscription already verified.', 'tobalt-city-alerts' ) );
         }
 
+        // Check token expiration
+        if ( ! empty( $subscriber->verify_token_expires ) && strtotime( $subscriber->verify_token_expires ) < time() ) {
+            return new \WP_Error( 'token_expired', __( 'Verification link has expired. Please subscribe again.', 'tobalt-city-alerts' ) );
+        }
+
         $wpdb->update(
             $this->table_name,
             [
-                'verified'     => 1,
-                'verify_token' => null,
-                'verified_at'  => current_time( 'mysql', true ),
+                'verified'             => 1,
+                'verify_token'         => null,
+                'verify_token_expires' => null,
+                'verified_at'          => current_time( 'mysql', true ),
             ],
             [ 'id' => $subscriber->id ]
         );
 
         return true;
+    }
+
+    /**
+     * Get client IP address.
+     */
+    private function get_client_ip() {
+        $ip = '';
+
+        if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+            $ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_CLIENT_IP'] ) );
+        } elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+            $ip = sanitize_text_field( wp_unslash( $_SERVER['HTTP_X_FORWARDED_FOR'] ) );
+            // Take first IP if multiple
+            if ( strpos( $ip, ',' ) !== false ) {
+                $ip = trim( explode( ',', $ip )[0] );
+            }
+        } elseif ( ! empty( $_SERVER['REMOTE_ADDR'] ) ) {
+            $ip = sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) );
+        }
+
+        return filter_var( $ip, FILTER_VALIDATE_IP ) ? $ip : '0.0.0.0';
     }
 
     /**

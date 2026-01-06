@@ -103,11 +103,11 @@ class Magic_Link {
         );
 
         if ( ! $result ) {
-            $error_msg = __( 'Failed to generate token.', 'tobalt-city-alerts' );
+            // Log DB error for debugging, but don't expose to users
             if ( ! empty( $wpdb->last_error ) ) {
-                $error_msg .= ' DB: ' . $wpdb->last_error;
+                error_log( 'Tobalt City Alerts - Magic Link DB Error: ' . $wpdb->last_error );
             }
-            return new \WP_Error( 'db_error', $error_msg );
+            return new \WP_Error( 'db_error', __( 'Failed to generate token. Please try again.', 'tobalt-city-alerts' ) );
         }
 
         return [

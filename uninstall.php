@@ -27,7 +27,7 @@ global $wpdb;
 $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}tobalt_approved_emails" );
 $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}tobalt_magic_tokens" );
 $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}tobalt_subscribers" );
-$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}tobalt_activity_log" );
+$wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}tobalt_alert_activity_log" );
 
 // Delete all alerts (CPT)
 $alerts = get_posts( [

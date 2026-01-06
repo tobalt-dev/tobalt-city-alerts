@@ -146,8 +146,11 @@ class Rest_API {
                     },
                 ],
                 'categories' => [
-                    'type'    => 'array',
-                    'default' => [],
+                    'type'              => 'array',
+                    'default'           => [],
+                    'sanitize_callback' => function ( $value ) {
+                        return array_map( 'absint', (array) $value );
+                    },
                 ],
             ],
         ] );
